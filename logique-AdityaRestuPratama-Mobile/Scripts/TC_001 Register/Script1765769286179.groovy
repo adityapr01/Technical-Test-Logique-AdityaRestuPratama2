@@ -17,7 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String apkPath = "C:\\Users\\user\\Katalon Studio\\logique-AdityaRestuPratama-Mobile\\Data Files\\gvm-staging.apk"
+String apkPath ="C:\\Users\\1423\\Downloads\\gvm-staging.apk"
+                
+//				 "C:\\Users\\user\\Katalon Studio\\logique-AdityaRestuPratama-Mobile\\Data Files\\gvm-staging.apk"
 Mobile.startApplication(apkPath, false)
 
 TestData excelData = findTestData('Data Files/register')

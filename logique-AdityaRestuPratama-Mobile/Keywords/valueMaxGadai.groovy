@@ -19,17 +19,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class valueMaxGadai {
-	
-	
+
+
 	@Keyword
 	public void registerAccount(String email, String namaLengkap, String noHp, String password, String confirmPassword) {
-		
-		
+
+
 		// Navigate To Register
 		Mobile.takeScreenshot()
 		Mobile.tap(findTestObject('Object Repository/android.widget.btnProfil'), 0)
 		Mobile.tap(findTestObject('Object Repository/android.view.btnRegister'), 0)
-        
+
 		// Input Credentials Account
 		Mobile.delay(10)
 
@@ -37,38 +37,35 @@ public class valueMaxGadai {
 		Mobile.tap(findTestObject('Object Repository/android.widget.fldEmail'), 0)
 		Mobile.setText(findTestObject('Object Repository/android.widget.fldEmail'), email, 0)
 		Mobile.hideKeyboard()
-		
+
 		Mobile.tap(findTestObject('Object Repository/android.widget.namaLengkap'), 0)
 		Mobile.setText(findTestObject('Object Repository/android.widget.namaLengkap'), namaLengkap, 0)
 		Mobile.hideKeyboard()
-		
+
 		Mobile.tap(findTestObject('Object Repository/android.widget.noHp'),0)
 		Mobile.setText(findTestObject('Object Repository/android.widget.noHp'), noHp, 0)
 		Mobile.hideKeyboard()
-		
+
 		Mobile.tap(findTestObject('Object Repository/android.widget.fldPassword'), 0)
-		Mobile.sendKeys(findTestObject('Object Repository/android.widget.fldPassword'), password)
+		Mobile.setText(findTestObject('Object Repository/android.widget.fldPassword'), password, 0)
 		Mobile.hideKeyboard()
-		
+
 
 		// Lakukan scroll jika Confirm Password tidak terlihat
 		Mobile.tap(findTestObject('Object Repository/android.widget.fldConfirmPassword'), 0)
-		Mobile.sendKeys(findTestObject('Object Repository/android.widget.fldConfirmPassword'), confirmPassword)
+		Mobile.setText(findTestObject('Object Repository/android.widget.fldConfirmPassword'), confirmPassword, 0)
 		Mobile.hideKeyboard()
-        
+
 		Mobile.takeScreenshot()
-        
+
 		// Click Button Register
 		Mobile.tap(findTestObject('Object Repository/android.view.btnDaftar'), 0)
-		
+
 
 	}
-	
+
 	@Keyword
 	public void loginCredentials(String email, String password) {
-		
-		
-		
 	}
 }
 
